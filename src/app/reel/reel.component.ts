@@ -27,15 +27,18 @@ export class ReelComponent {
         Melding: form.value.melding,
         Mottaker: form.value.nummer,
         NySesjon: false,
-        Simulering: false,
+        Simulering: form.value.radio,
         PrisGruppe: 0
       }
      ]
     }
-    this.smsService.sendSms(data)
-                   .subscribe(
-                       res => alert("Melding sent til " + data.Meldinger[0].Mottaker + ", med teksten " + data.Meldinger[0].Melding + ", fra " + data.Meldinger[0].Avsender + "!"),
-                       error =>  alert("Melding ikke sent!"));
-    form.reset();
+    const bekreft = confirm("Sjekk at opplysningene stemmer! Til: " + data.Meldinger[0].Mottaker + ". Tekst: " + data.Meldinger[0].Melding + ". Fra: " + data.Meldinger[0].Avsender + "!")
+    if (bekreft === true) {
+      this.smsService.sendSms(data)
+                      .subscribe(
+                        res => alert("Melding sent til " + data.Meldinger[0].Mottaker + ", med teksten " + data.Meldinger[0].Melding + ", fra " + data.Meldinger[0].Avsender + "!"),
+                        error =>  alert("Melding ikke sent!"));
+      form.reset();
+    } 
   }
 }

@@ -63,3 +63,7 @@ a:hover {
 textarea {
   width: 142px !important;
 }
+
+.radio {
+  margin: 5px;
+}
