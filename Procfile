@@ -1,1 +1,1 @@
-web: npm install angular-cli -g && npm start
+web: npm start
