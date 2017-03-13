@@ -59,3 +59,7 @@ a:hover {
   background-image: linear-gradient(to bottom, #327299, #030608);
   text-decoration: none;
 }
+
+textarea {
+  width: 142px !important;
+}

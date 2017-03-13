@@ -12,32 +12,32 @@ export class SmsService {
 
   constructor (private http: Http) {}
 
-sendSms( data: any ): Observable<any> {
-  const headers = new Headers({
+  sendSms( data: any ): Observable<any> {
+    const headers = new Headers({
       'Content-Type': 'application/json',
       'AccessToken': process.env.FRAM_API_KEY
     });
-  let options = new RequestOptions({ headers: headers });
-  let body = JSON.stringify(data);
+    let options = new RequestOptions({ headers: headers });
+    let body = JSON.stringify(data);
 
-  return this.http.post(this.smsUrl, body, options)
+    return this.http.post(this.smsUrl, body, options)
                   .map((res: Response) => console.log(res.json()))
                   .catch(this.handleError)
-}
+  }
 
 
 
   private handleError (error: Response | any) {
-   let errMsg: string;
-   if (error instanceof Response) {
-     const body = error.json() || '';
-     const err = body.error || JSON.stringify(body);
-     errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-   } else {
-     errMsg = error.message ? error.message : error.toString();
-   }
-   console.error(errMsg);
-   return Observable.throw(errMsg);
- }
+    let errMsg: string;
+    if (error instanceof Response) {
+      const body = error.json() || '';
+      const err = body.error || JSON.stringify(body);
+      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+    } else {
+      errMsg = error.message ? error.message : error.toString();
+    }
+    console.error(errMsg);
+    return Observable.throw(errMsg);
+  }
 
 }

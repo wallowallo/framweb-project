@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var process:any;
 
 @Component({
   selector: 'app-hjem',
