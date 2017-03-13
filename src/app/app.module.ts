@@ -5,18 +5,32 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { HjemComponent } from './hjem/hjem.component';
+import { OvelseComponent } from './ovelse/ovelse.component';
+import { ReelComponent } from './reel/reel.component';
+
+import { SmsService } from './_services/sms.service';
+
+import { routing } from './_routing/routing';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HjemComponent,
+    OvelseComponent,
+    ReelComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule
+    MaterialModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    SmsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

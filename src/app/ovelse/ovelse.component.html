@@ -1,0 +1,31 @@
+<form #sendSmsForm="ngForm" (ngSubmit)="sendSms(sendSmsForm)">
+  <md-card class="øvelseCard">
+    <md-card-title>
+      <h2>
+        Øvelse:
+      </h2>
+    </md-card-title>
+
+    <md-card-content>
+      <md-input-container>
+          <input mdInput type='text' name="avsender" placeholder="Avsender" ngModel required>
+      </md-input-container>
+    </md-card-content>
+
+    <md-card-content>
+      <md-input-container>
+          <input mdInput type='text' name="nummer" placeholder="Mottaker" ngModel required>
+      </md-input-container>
+    </md-card-content>
+
+    <md-card-content>
+      <md-input-container>
+        <textarea mdInput row="3" type='text' placeholder='Melding til bruker' name="melding" ngModel required></textarea>
+      </md-input-container>
+    </md-card-content>
+
+    <md-card-content>
+      <button md-raised-button type='submit'>Øvelse</button>
+    </md-card-content>
+  </md-card>
+</form>
