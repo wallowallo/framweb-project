@@ -4,6 +4,8 @@ import { Headers, RequestOptions } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 
+declare var process:any;
+
 @Injectable()
 export class SmsService {
   private smsUrl = process.env.FRAM_API_URL;
