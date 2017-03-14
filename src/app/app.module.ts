@@ -6,8 +6,7 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HjemComponent } from './hjem/hjem.component';
-import { OvelseComponent } from './ovelse/ovelse.component';
-import { ReelComponent } from './reel/reel.component';
+import { SmsComponent } from './sms/sms.component';
 
 import { SmsService } from './_services/sms.service';
 
@@ -18,8 +17,7 @@ import 'hammerjs';
   declarations: [
     AppComponent,
     HjemComponent,
-    OvelseComponent,
-    ReelComponent
+    SmsComponent
   ],
   imports: [
     BrowserModule,

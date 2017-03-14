@@ -14,9 +14,9 @@ import 'rxjs/add/operator/toPromise';
 
 @Component({
   selector: 'app-reel',
-  templateUrl: './reel.component.html'
+  templateUrl: './sms.component.html'
 })
-export class ReelComponent {
+export class SmsComponent {
 
   constructor(private smsService: SmsService) { }
 
@@ -39,6 +39,6 @@ export class ReelComponent {
                         res => alert("Melding sent til " + data.Meldinger[0].Mottaker + ", med teksten " + data.Meldinger[0].Melding + ", fra " + data.Meldinger[0].Avsender + "!"),
                         error =>  alert("Melding ikke sent!"));
       form.reset();
-    } 
+    }
   }
 }

@@ -9,22 +9,16 @@ md-card {
   flex-flow: column wrap;
 }
 
-.reelCard {
+.smsCard {
   margin: 40px auto;
   width: 250px;
   text-align: center;
-}
-
-.øvelseCard {
-  text-align: center;
-  margin: 40px auto;
-  width: 250px;
 }
 
 .linkCard {
   margin: 40px auto;
   width: 250px;
-  height: 350px;
+  height: 250px;
   text-align: center;
 }
 
